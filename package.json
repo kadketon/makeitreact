@@ -1,0 +1,51 @@
+{
+  "name": "makeitreact",
+  "version": "0.0.1",
+  "description": "MakeItReact is an AI-driven tool that allows users to create dynamic HTML components with ease. Just design your component using a simple prompt, link it to your site, and watch it automatically update and react to real-time data!",
+  "scripts": {
+    "clean": "rimraf dist && rimraf .tshy",
+    "prepare": "npm run clean && tshy && npx rollup -c"
+  },
+  "author": "kadketon",
+  "license": "MIT",
+  "main": "./dist/commonjs/mod.js",
+  "module": "./dist/esm/mod.js",
+  "types": "./dist/commonjs/mod.d.ts",
+  "files": [
+    "dist"
+  ],
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/mod.ts"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rimraf": "^6.0.1",
+    "rollup": "^2.79.2",
+    "tshy": "^3.0.2",
+    "typescript": "^5.7.3",
+    "promise-polyfill": "^8.3.0",
+    "whatwg-fetch": "^3.6.20"
+  },
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/mod.d.ts",
+        "default": "./dist/esm/mod.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/mod.d.ts",
+        "default": "./dist/commonjs/mod.js"
+      }
+    }
+  }
+}
