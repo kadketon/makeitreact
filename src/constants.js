@@ -1,1 +1,1 @@
-export const generateEndpoint = "http://localhost:3000/api/generate";
+export const generateEndpoint = "https://makeitreact.netlify.app/api/generate";
