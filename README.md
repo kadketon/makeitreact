@@ -2,6 +2,8 @@
 
 MakeItReact is an AI-driven tool that allows users to create dynamic HTML components with ease. Just design your component using a simple prompt, link it to your site, and watch it automatically update and react to real-time data! 🔥
 
+<img src="light.gif" width=480 heigth=270 />
+
 ## Here's how you can get started:
 
 1. Log in to [makeitreact](https://makeitreact.netlify.app/)
